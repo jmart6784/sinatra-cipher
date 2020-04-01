@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title" class="glow">Cesar's Cipher</h1>
+      <div id="form">
+        <form id="cinput">
+          <input id="bar" type="text", name="cipher">
+          <input id="numbtn" type="number" name="offset" min='0' max='10' value="1"><br>
+          <input id="btn" type="submit">
+        </form>
+      </div>
+
+      <p>YOUR CIPHER: <%= Caesar.new.caesar_cipher(input, input2.to_i) if input != nil%></p>
+    </div>
+  </body>
+</html>
