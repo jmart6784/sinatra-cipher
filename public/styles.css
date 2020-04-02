@@ -5,11 +5,11 @@
 #title {
   color: white;
   text-align: center;
-  padding-top: 225px;
+  padding-top: 125px;
 }
 
 .glow {
-  font-size: 55px;
+  font-size: 65px;
   color: #fff;
   text-align: center;
   -webkit-animation: glow 3s ease-in-out infinite alternate;
@@ -40,7 +40,7 @@ body {
   background-color: rgb(71, 71, 71);
   color: white;
   height: 55%;
-  width: 80%;
+  width: 81%;
   border-radius: 5px 0px 0px 0px;
   border: solid white 0px;
   margin-right: 0px;
@@ -102,7 +102,26 @@ body {
 }
 
 #form {
-  width: 350px;
+  width: 400px;
   height: 150px;
   margin: 0 auto;
+}
+
+#help {
+  width: 35px;
+  color: rgb(146, 146, 146);
+  border: solid rgb(146, 146, 146) 2px;
+  border-radius: 100px;
+  position: relative;
+  left: 930px;
+  top: 355px;
+}
+
+#help:hover {
+  color: white;
+  border: solid white 2px;
+}
+
+#link {
+  display: none;
 }

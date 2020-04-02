@@ -3,24 +3,24 @@ require "sinatra/reloader" if development?
 
 class Caesar
   def caesar_cipher(str, key)
-    alphabet = ("a".."z").to_a
-    str_l = str.downcase
-    str_arr = str_l.split("")
-    index = 0
-    str_arr_index = 0
-    new_match = []
+    hash = Hash[('a'..'z').map.with_index.to_a]
   
-    while index != 26
-      if str_arr[str_arr_index] == alphabet[index] && str_arr_index <= str_arr.length
-        new_match << alphabet[index - key]
-        index = 0
-        str_arr_index += 1
-      else 
-        index += 1
-      end
+    (0..str.length - 1).each do |item|
+      letter = str[item].downcase
+  
+      next if hash[letter].nil?
+  
+      new_index = hash[letter] + key.to_i
+  
+      new_index -= 26 if new_index >= 26
+  
+      new_value = hash.key(new_index)
+  
+      new_value = new_value.upcase if str[item] === str[item].capitalize
+  
+      str[item] = new_value
     end
-    puts "Caesar cipher of #{str_l} is #{new_match.join("")}"
-    return new_match.join("")
+    return str
   end
 end
 
