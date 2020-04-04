@@ -5,8 +5,7 @@
   </head>
   <body>
     <div id="container">
-    <p id="help">?</p>
-      <h1 id="title" class="glow">Cesar's Cipher</h1>
+      <h1 id="title">Cesar's Cipher</h1>
       <div id="form">
         <form id="cinput">
           <input id="bar" type="text", name="cipher">
@@ -14,11 +13,13 @@
           <input id="btn" type="submit" value="ENCRYPT">
         </form>
       </div>
+      <p id="ques">What's <a href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank" id="link">Caesar's Cipher?</a></p>
 
-      <p>YOUR CIPHER:</p>
-      <p> <%= Caesar.new.caesar_cipher(input, input2.to_i) if input != nil%></p>
+      <% if input %>
+        <p>YOUR CIPHER:</p>
+        <p> <%= Caesar.new.caesar_cipher(input, input2.to_i) if input != nil%></p>
+      <% end %>
     </div>
-    <a id="link" href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank">link</a>
 
     <script src="/app.js"></script>
   </body>

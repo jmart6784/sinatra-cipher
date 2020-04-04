@@ -3,9 +3,10 @@
 }
 
 #title {
+  font-size: 65px;
   color: white;
   text-align: center;
-  padding-top: 125px;
+  padding-top: 200px;
 }
 
 .glow {
@@ -64,6 +65,7 @@ body {
 }
 
 #btn:hover {
+  font-size: 40px;
   color: white;
   border: solid white 1px;
   color: #fff;
@@ -107,21 +109,11 @@ body {
   margin: 0 auto;
 }
 
-#help {
-  width: 35px;
-  color: rgb(146, 146, 146);
-  border: solid rgb(146, 146, 146) 2px;
-  border-radius: 100px;
-  position: relative;
-  left: 930px;
-  top: 355px;
-}
-
-#help:hover {
-  color: white;
-  border: solid white 2px;
-}
-
 #link {
-  display: none;
+  font-size: 20px;
+  color: white;
+}
+
+#ques {
+  font-size: 20px;
 }
